@@ -27,6 +27,10 @@ Render dynamically created cubes: open index.hbs and delete all default cubes, b
 partials (view folder) is created in case the view is going to be reused, for example cube.hbs or a card of something. We get the html code from index.hbs and put in the cube.hbs. Replace the cut zone with {{>cube}}. In partials/cube.hbs change the href to dynamic content using cube id
 Go to details.hbs and make dynamic changes
 2:47:47 - describe the details logic
+----
+req.params - parameters
+req.body - post data from the form sent and parsed
+req.query - query string in the browser
 
 
 
