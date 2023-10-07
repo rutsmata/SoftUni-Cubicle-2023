@@ -13,6 +13,6 @@ expressConfig(app);
 handlebarsConfig(app);
 
 app.use(homeController);
-app.use('/cubes', cubeController);
+app.use("/cubes", cubeController);
 
 app.listen(PORT, () => console.log(`Server is listening on port: ${PORT}...`));
