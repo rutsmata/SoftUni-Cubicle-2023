@@ -14,5 +14,7 @@ Application should have its initial configuration
 Create config folder and move relevant code from index.js
 -----
 Create controllers folder - modular routing is preferred
+---
+Go to create.hbs and adjust the html to have: method = POST; action = '/cubes/create' in ordert to redirect to relevant  page after form is completed
 
 
