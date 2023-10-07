@@ -12,5 +12,7 @@ Option:Require path library and fix the route to css+images
 Application should have its initial configuration
 ----------
 Create config folder and move relevant code from index.js
+-----
+Create controllers folder - modular routing is preferred
 
 
