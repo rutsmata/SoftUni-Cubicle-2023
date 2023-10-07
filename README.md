@@ -17,6 +17,8 @@ Create controllers folder - modular routing is preferred
 ---
 Go to create.hbs and adjust the html to have: method = POST; action = '/cubes/create' in order to redirect to relevant  page after form is completed; if action is empty it will have default behaviour - it will return the form to where it was generated. req.body will contain the form data which must be preserved - temporary (in array or object) or db. This should be decided by service/manager functionality who will manage the data upon arrival.
 Create folder managers and relevant cubeManager file - it should have method to preserve cubes and method to get cubes
+----
+Render dynamically created cubes: open index.hbs and delete all default cubes, but one. It will be a template which will show every cube generated mannually through the form
 
 
 
