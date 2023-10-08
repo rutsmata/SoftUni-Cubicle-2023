@@ -31,10 +31,12 @@ router.get("/:cubeId/details", async (req, res) => {
 });
 
 router.get("/:cubeId/attach-accessory", async (req, res) => {
-  const accessories = await accessoryManager.getAll().lean();
   const cube = await cubeManager.getOne(req.params.cubeId).lean();
+  const accessories = await accessoryManager.getAll().lean();
 
-  res.render("accessory/attach", { cube, accessories });
+  const hasAccessories = accessories.length > 0;
+
+  res.render("accessory/attach", { cube, accessories, hasAccessories });
 });
 
 module.exports = router;
