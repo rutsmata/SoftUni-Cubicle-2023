@@ -33,7 +33,17 @@ req.body - post data from the form sent and parsed
 req.query - query string in the browser
 ----
 DB session
+upon commit error, at Terminal run:
+git config --global user.email 'rustmata@gmail.com'
+git config --global user.name 'Rumen Nazarov'
+At Terminal:
 npm i mongoose
+Create dbConfig.js and export. Import dbConnect in index.js and add then/catch
+Create model - it describes what shall be put in the db, what structure, how to read it.....create folder models and create file Cube.js. Create the cubeSchema.
+
+
+
+
 
 
 
