@@ -31,6 +31,8 @@ Go to details.hbs and make dynamic changes
 req.params - parameters
 req.body - post data from the form sent and parsed
 req.query - query string in the browser
+----
+DB session
 
 
 
