@@ -40,6 +40,12 @@ At Terminal:
 npm i mongoose
 Create dbConfig.js and export. Import dbConnect in index.js and add then/catch
 Create model - it describes what shall be put in the db, what structure, how to read it.....create folder models and create file Cube.js. Create the cubeSchema.
+----
+either {{cube.name}}
+or 
+{{#with cube}}
+{{name}}
+{{/with}}
 
 
 
