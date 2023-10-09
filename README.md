@@ -47,7 +47,11 @@ or
 {{name}}
 {{/with}}
 ----
-authentication
+authentication2
+----
+npm i bcrypt
+npm i cookie-parser
+npm i jsonwebtoken
 
 
 
