@@ -56,9 +56,9 @@ npm i jsonwebtoken
 create folder user within views - it will have the views for login, register. Copy new html nav records into main.hbs
 Create file userController
 Upon post request - we derive the data from the body; in the create.hbs file - action could be removed if data will be returned to the same address, or write the exact end point for return. Method should be POST. Then we should redirect the page
-Create User.js file and prepare model for it - in order to store the user credentials in the db
+Create User.js file and prepare model for it - in order to store the user credentials in the db - make relevant validation
 Create userManager.js where the business logic shall be
-
+Edit User.js in order to hash the password. Hashing though is ok to be made in the userManager.js as well using bcrypt and pre hook methods from mongoose
 
 
 
