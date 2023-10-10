@@ -59,7 +59,8 @@ Create userManager.js where the business logic shall be
 Edit User.js in order to hash the password. Hashing though is ok to be made in the userManager.js as well using bcrypt and pre hook methods from mongoose. bcrypt is working async
 After successful login, we should tell the client it is logged, by returning cookie
 npm i cookie-parser: require in expressConfig.js
-npm i jsonwebtoken
+npm i jsonwebtoken: create new folder lib and file jwt.js - needed to create token
+
 
 
 

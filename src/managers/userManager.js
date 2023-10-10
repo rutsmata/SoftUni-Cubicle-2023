@@ -1,6 +1,9 @@
 const bcrypt = require("bcrypt");
 
+const jwt = require('../lib/jwt')
 const User = require("../models/User");
+
+const SECRET = 'someveryverylongsecret'
 
 //create function that will create user data in db using the User model
 exports.register = (userData) => User.create(userData);
@@ -20,6 +23,14 @@ exports.login = async (username, password) => {
     throw new Error('Can not find username or password!')
   }
 
-  //return user
-  return user
+  //create token that will expire in 2 days
+  const payload = {
+    _id: user._id,
+    username: user.username,
+  }
+
+  const token = await jwt.sign(payload, SECRET, {expiresIn: "2d"})
+
+  //return token
+  return token
 };
