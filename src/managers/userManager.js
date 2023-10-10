@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require('../lib/jwt')
 const User = require("../models/User");
 
-const SECRET = 'someveryverylongsecret'
+const SECRET = '114881f5f61828c951b6491132b290eb2dd0256ae777941d38773ff66f30e015'
 
 //create function that will create user data in db using the User model
 exports.register = (userData) => User.create(userData);

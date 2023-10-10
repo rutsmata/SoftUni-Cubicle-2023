@@ -57,9 +57,11 @@ Upon post request - we derive the data from the body; in the create.hbs file - a
 Create User.js file and prepare model for it - in order to store the user credentials in the db - make relevant validation
 Create userManager.js where the business logic shall be
 Edit User.js in order to hash the password. Hashing though is ok to be made in the userManager.js as well using bcrypt and pre hook methods from mongoose. bcrypt is working async
-After successful login, we should tell the client it is logged, by returning cookie
+After successful login, we should tell the client it is logged, by returning cookie (below it is jwt)
 npm i cookie-parser: require in expressConfig.js
-npm i jsonwebtoken: create new folder lib and file jwt.js - needed to create token
+npm i jsonwebtoken: create new folder lib and file jwt.js - needed to create token to be provided to the browser
+Upon next log-in we shall receive the token and will know it is recurring client
+
 
 
 
