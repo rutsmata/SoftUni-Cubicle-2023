@@ -52,6 +52,9 @@ authentication2
 npm i bcrypt
 npm i cookie-parser
 npm i jsonwebtoken
+----
+create folder user within views - it will have the views for login, register. Copy new html nav records into main.hbs
+Create file userController
 
 
 
