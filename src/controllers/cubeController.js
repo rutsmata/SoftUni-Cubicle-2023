@@ -4,6 +4,7 @@ const cubeManager = require("../managers/cubeManager");
 const accessoryManager = require('../managers/accessoryManager')
 
 router.get("/create", (req, res) => {
+  //console.log(req.user); // after authMiddleware set-up we will be able to see who is the user that hit the create cube button
   res.render("create");
 });
 
