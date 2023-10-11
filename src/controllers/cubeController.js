@@ -16,6 +16,7 @@ router.post("/create", async (req, res) => {
     description,
     imageUrl,
     difficultyLevel: Number(difficultyLevel),
+    owner: req.user._id // this is id of the user who sends the current request and becomes owner of the cube
   });
 
   res.redirect("/");
