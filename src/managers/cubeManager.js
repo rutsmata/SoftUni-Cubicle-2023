@@ -28,3 +28,5 @@ exports.create = (cubeData) => {
   return cube.save();
 
 };
+
+exports.delete = (cubeId) => Cube.findByIdAndDelete(cubeId)

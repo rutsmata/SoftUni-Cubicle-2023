@@ -12,9 +12,9 @@ exports.auth = async (req, res, next) => {
   if (token) {
     try {
       //get the decoded token and validate - e.g if our SECRET is same, if token has expired...
-      const user = await jwt.verify(token, SECRET);
+      const decodedToken = await jwt.verify(token, SECRET);
         //record the user info which can be passed to the next middleware
-      req.user = user;
+      req.user = decodedToken;
 
       next();
     } catch (err) {
