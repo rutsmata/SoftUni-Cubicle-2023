@@ -62,6 +62,8 @@ npm i cookie-parser: require in expressConfig.js
 npm i jsonwebtoken: create new folder lib and file jwt.js - needed to create token to be provided to the browser
 Upon next log-in (request) we shall get token details from a get request to our server : const token = req.cookies[‘auth’] (already sent to the browser upon successful login of a user)  and will know it is recurring client. We need middleware to check the token upon every request sent to us.
 Create folder middlewares and file authMiddleware.js
+Edit functionality
+
 
 
 

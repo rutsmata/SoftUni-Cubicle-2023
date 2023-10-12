@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const userSchema = new mongoose.Schema({
   username: String,
   password: {
-    type: String,
+    type: String, required: true
     // validate: {
     //     validator: function (value) {
     //         return this.repeatPassword === value;

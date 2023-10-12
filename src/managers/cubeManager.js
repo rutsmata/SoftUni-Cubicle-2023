@@ -26,7 +26,8 @@ exports.create = (cubeData) => {
   const cube = new Cube(cubeData);
 
   return cube.save();
-
 };
 
-exports.delete = (cubeId) => Cube.findByIdAndDelete(cubeId)
+exports.update = (cubeId, cubeData) => Cube.findByIdAndUpdate(cubeId, cubeData);
+
+exports.delete = (cubeId) => Cube.findByIdAndDelete(cubeId);
