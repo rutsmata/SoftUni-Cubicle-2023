@@ -13,8 +13,10 @@ exports.auth = async (req, res, next) => {
     try {
       //get the decoded token and validate - e.g if our SECRET is same, if token has expired...
       const decodedToken = await jwt.verify(token, SECRET);
-        //record the user info which can be passed to the next middleware
+      //record the user info which can be passed to the next middleware
       req.user = decodedToken;
+      res.locals.user = decodedToken;
+      res.locals.isAuthenticated = true;
 
       next();
     } catch (err) {
@@ -24,7 +26,14 @@ exports.auth = async (req, res, next) => {
       res.redirect("/users/login");
     }
   } else {
-
     next();
   }
+};
+
+exports.isAuth = (req, res, next) => {
+  if (!req.user) {
+    return res.redirect("/users/login");
+  }
+
+  next();
 };
